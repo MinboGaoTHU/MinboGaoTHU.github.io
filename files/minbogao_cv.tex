@@ -1,0 +1,173 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage[utf8]{inputenc}  
+\moderncvtheme[blue]{classic}     
+\nopagenumbers{}                             
+\AtBeginDocument{\recomputelengths}
+%\usepackage[french]{babel} 
+
+
+%\renewcommand{\listitemsymbol}{-~}  % change the symbol for lists
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+% adjust the page margins
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.9cm}
+
+\setlength{\makecvtitlenamewidth}{9cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Minbo}
+\familyname{Gao}
+%\title{Étudiant ingénieur en Informatique}                        
+\address{Key Laboratory of System Software, Institute of Software}{Chinese Academy of Sciences, Beijing, China}
+\mobile{(+86) 13108714733}
+% \phone{+33(0)4.76.24.10.36}       
+\email{gmb17@tsinghua.org.cn} 
+\extrainfo{{\href{https://scholar.google.com/citations?hl=zh-CN&user=b8i9J_QAAAAJ&view_op=list_works&sortby=pubdate}{Google Scholar}}}
+\photo[50pt][0.4pt]{../images/minbogao1.jpg}                  % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+\AfterPreamble{\hypersetup{
+  pdfauthor={Thomas Jalabert},
+  pdftitle={CV de Thomas Jalabert},
+  pdfsubject={CV détaillé pour Thomas Jalabert},
+  urlcolor=blue,
+}}
+
+\begin{document}
+
+\makecvtitle
+
+% \section{Personal Data}
+% \cventry{}{Date of Birth}{}{April 22nd, 1999}{}{}  % arguments 3 to 6 can be left empty
+
+% \cventry{}{Current Address}{}{University of Chinese Academy of Sciences (Zhongguancun Campus), Beijing, China}{}{}
+
+% \cventry{}{Current Affiliation}{}{Institute of Software,
+% Chinese Academy of Sciences
+% }{}{}
+
+\section{Education}
+
+\cventry{2021-}{Ph.D. Student}{Institute of Software,
+Chinese Academy of Sciences}{Beijing}{China}{\begin{itemize}
+    \item Advised by Prof. Mingsheng Ying and Prof. Zhengfeng Ji.
+\end{itemize}}
+\cventry{2017-2021}{B.Sc. in Computer Science and Technology (Yao Class)}{Institute for Interdisciplinary Information Sciences, Tsinghua University}{Beijing}{China}{}
+
+
+
+\section{Research Interest}
+
+\cvitem{}{My research interests lie in two closely related directions. The first is \textbf{quantum algorithms}, particularly for problems motivated by \textit{optimization}, such as graph and discrete optimization problems [4,5,6], as well as distributional and learning-related tasks [2,8,10,11]; I am also interested in \textit{quantum algorithms for quantum dynamics and simulation} [1,9]. The second is \textbf{quantum program logic}, especially \textit{relational} quantum Hoare logics [3,7], where I am interested in bringing in tools from \textit{quantum optimal transport} and other optimization-based methods to develop new logical and semantic results.}
+% \section{Research Interests}
+
+% \cvitem{Quantum algorithms}{
+% Especially for optimization problems, graph problems, and quantum system simulation.
+% }
+
+% \cvitem{Quantum program logics}{
+% Quantum Hoare logic, especially relational Hoare logic.
+% }
+
+\section{Publications}
+\cvitem{}{\emph{Author order follows the alphabetical convention in theoretical computer science unless otherwise specified.}}
+
+\cvitem{[1]}{\textbf{Minbo Gao}, Zhengfeng Ji, Qisheng Wang, Wenjun Yu, Qi Zhao. Quantum Hamiltonian Certification. \href{https://epubs.siam.org/doi/abs/10.1137/1.9781611978971.53}{Proceedings of the 2026 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 2026), 1424-1467.}}
+
+\cvitem{[2]}{Kean Chen, \textbf{Minbo Gao}, Tongyang Li, Qisheng Wang, Xinzhao Wang. Quantum Multi-Level Estimation of Functionals of Discrete Distributions. \href{https://arxiv.org/abs/2605.03685}{Accepted to the 53rd International Colloquium on Automata, Languages, and Programming (ICALP 2026).}}
+
+\cvitem{[3]}{Gilles Barthe, \textbf{Minbo Gao}, Jam Kabeer Ali Khan, Matthijs Muis, Ivan Renison, Keiya Sakabe, Michael Walter, Yingte Xu, Tianshi Yu, Li Zhou. Complete Relational Logic for Infinite-Dimensional Quantum Programs with Unbounded Assertions. \href{https://arxiv.org/abs/2510.07051}{Accepted to the 41st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2026).}}
+
+\cvitem{[4]}{\textbf{Minbo Gao}, Zhengfeng Ji, Qisheng Wang. Quantum Approximate $k$-Minimum Finding. \href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2025.51}{Proceedings of the 33rd Annual European Symposium on Algorithms (ESA 2025), 351, 51:1--51:15.}}
+
+\cvitem{[5]}{Chenghua Liu, \textbf{Minbo Gao}, Zhengfeng Ji, Mingsheng Ying (by contribution). Quantum Speedup for Hypergraph Sparsification. \href{https://proceedings.mlr.press/v267/liu25r.html}{Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267:38448-38466, 2025.}}
+
+\cvitem{[6]}{Simon Apers, \textbf{Minbo Gao}, Zhengfeng Ji, Chenghua Liu. Quantum Speedup for Sampling Random Spanning Trees. \href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.13}{Proceedings of the 52nd International Colloquium on Automata, Languages, and Programming (ICALP 2025), 334, 13:1--13:21.}}
+
+\cvitem{[7]}{Gilles Barthe, \textbf{Minbo Gao}, Theo Wang, Li Zhou. Complete Quantum Relational Hoare Logics from Optimal Transport Duality. \href{https://ieeexplore.ieee.org/abstract/document/11186298/}{2025 40th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2025), 884-925.}}
+
+\cvitem{[8]}{\textbf{Minbo Gao}, Zhengfeng Ji, Tongyang Li, Qisheng Wang. Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games. \href{https://proceedings.neurips.cc/paper_files/paper/2023/file/637df18481a6aa74238bd2cafff94cb9-Paper-Conference.pdf}{Advances in Neural Information Processing Systems 36 (NeurIPS 2023), 31177-31203.}}
+
+
+\section{Selected Preprints}
+\cvitem{}{\emph{Author order follows the alphabetical convention in theoretical computer science.}}
+
+
+\cvitem{[9]}{\textbf{Minbo Gao}, Zhengfeng Ji, Chenghua Liu. L\'{e}vy-Khintchine Structure Enables Fast-Forwardable Lindbladian Simulation.
+\href{https://arxiv.org/abs/2511.10253}{arXiv:2511.10253}.}
+
+
+\cvitem{[10]}{Jinge Bao, \textbf{Minbo Gao}, Qisheng Wang. On Estimating the Quantum Tsallis Relative Entropy.
+\href{https://arxiv.org/abs/2510.00752}{arXiv:2510.00752}.}
+
+\cvitem{[11]}{\textbf{Minbo Gao}\textsuperscript{*}, Tianle Xie\textsuperscript{*}, Simon S. Du, Lin F. Yang (by contribution; \textsuperscript{*} indicates equal contribution, with the first two authors ordered alphabetically). A Provably Efficient Algorithm for Linear Markov Decision Process with Low Switching Cost.
+\href{https://arxiv.org/abs/2101.00494}{arXiv:2101.00494}.}
+
+% \cventry{2023}{\href{https://arxiv.org/abs/2304.14197}{Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games}}{arXiv:2304.14197}{}{}{ \textbf{Minbo Gao}, Zhengfeng Ji, Tongyang Li, Qisheng Wang (lexicographic order)\\We propose the first online quantum algorithm for zero-sum games with $\tilde O (1)$ regret under the game setting. Moreover, our quantum algorithm computes an $\varepsilon$-approximate Nash equilibrium of an m×n matrix zero-sum game in quantum time $\tilde O (\sqrt{m+n}/\varepsilon^{2.5})$, yielding a quadratic improvement over classical algorithms in terms of m,n. Our algorithm uses standard quantum inputs and generates classical outputs with succinct descriptions, facilitating end-to-end applications. As an application, we obtain a fast quantum linear programming solver. Technically, our online quantum algorithm "quantizes" classical algorithms based on the optimistic multiplicative weight update method. At the heart of our algorithm is a fast quantum multi-sampling procedure for the Gibbs sampling problem, which may be of independent interest.}
+
+% \cventry{2022}{\href{https://arxiv.org/abs/2212.00337}{Fault Models in Superconducting quantum circuits}}{arXiv:2212.00337}{}{}{ Qifan Huang, Boxi Li, \textbf{Minbo Gao}, Mingsheng Ying (by contribution)\\Fault models are indispensable for many EDA tasks, so as for design and implementation of quantum hardware. In this article, we propose a fault model for superconducting quantum systems. Our fault model reflects the real fault behavior in control signals and structure of quantum systems. Based on it, we conduct fault simulation on controlled-Z gate and quantum circuits by QuTiP. We provide fidelity benchmarks for incoherent faults and test patterns of minimal test repetitions for coherent faults. Results show that with $34$ test repetitions a $10\%$ control noise can be detected, which help to save test time and memory.}
+
+% \cventry{2021}{\href{https://arxiv.org/abs/2101.00494}{A Provably Efficient Algorithm for Linear Markov Decision Process with Low Switching Cost}}{arXiv:2101.00494}{}{}{\textbf{Minbo Gao}*, Tianle Xie*, Simon S. Du, Lin F. Yang (by contribution)\\(* marks equal contribution)\\Many real-world applications, such as those in medical domains, recommendation systems, etc, can be formulated as large state space reinforcement learning problems with only a small budget of the number of policy changes, i.e., low switching cost. This paper focuses on the linear Markov Decision Process (MDP) recently studied in [Yang et al. 2019, Jin et al. 2020] where the linear function approximation is used for generalization on the large state space. We present the first algorithm for linear MDP with a low switching cost. Our algorithm achieves an $\tilde O (\sqrt{d^3H^4K})$ regret bound with a near-optimal $O(dH\log K)$ global switching cost where d is the feature dimension, H is the planning horizon and K is the number of episodes the agent plays. Our regret bound matches the best existing polynomial algorithm by [Jin et al. 2020] and our switching cost is exponentially smaller than theirs. When specialized to tabular MDP, our switching cost bound improves those in [Bai et al. 2019, Zhang et al. 2020b]. We complement our positive result with an $\Omega(dH/\log d)$ global switching cost lower bound for any no-regret algorithm.}
+
+% \cventry{2020}{\href{https://arxiv.org/abs/2012.02781}{One-shot dynamical resource theory}}{arXiv:2012.02781}{}{}{ Xiao Yuan, Pei Zeng, \textbf{Minbo Gao}, Qi Zhao (by contribution)\\A fundamental problem in resource theory is to study the manipulation of the resource. Focusing on a general dynamical resource theory of quantum channels, here we consider tasks of one-shot resource distillation and dilution with a single copy of the resource. For any target of unitary channel or pure state preparation channel, we establish a universal strategy to determine upper and lower bounds on rates that convert between any given resource and the target...}
+
+
+\section{Teaching Experiences}
+
+\cventry{2021 Spring}{Teaching Assistant, Theory of Computation (Instructor: Prof. Ran Duan)}{Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University}{Beijing}{China}{Led problem-solving sessions and graded assignments.}
+               
+
+\section{Academic Activities}
+
+\cventry{2021--}{{\href{https://quantum.cs.tsinghua.edu.cn/author/高敏博/}{Long-term Visiting Student}}}{Center for Quantum Software, Department of Computer Science and Technology, Tsinghua Univeristy}{Beijing}{China}{Hosted by Prof. Zhengfeng Ji.}
+
+\cventry{July, 2025}
+{Invited Speaker at 2025 INFORMS International Meeting}
+{}
+{Singapore}
+{}
+{Presenting our work ``Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games''.}
+
+\cventry{April 2025}
+{Participant at Workshop on Quantum Information and Optimization}
+{Tianyuan Mathematics Research Center}
+{Kunming, China}
+{}
+{Presenting our work ``Quantum Approximate $k$-Minimum Finding''.}
+
+
+\cventry{Nov 2024}
+{Visiting Student}
+{School of Artificial Intelligence, Wuhan University}
+{Wuhan, China}
+{}
+{Hosted by Prof. Yinan Li.}
+
+\cventry{Nov 2023 --  Jan 2024}
+{Visiting Student}
+{Graduate School of Mathematics, Nagoya University}
+{Nagoya, Japan}
+{}
+{Hosted by Prof. Fran\c{c}ois Le Gall.}
+
+\cventry{July 2023}{Visiting Student}{Department of Computer Science and Technology, Nanjing University}{Nanjing, China}{}{Hosted by Prof. Penghui Yao.}
+
+% \cventry{March-July 2020}{Remote Spring Internship}{Remote}{}{}{Internship with Prof. Lin F. Yang in UCLA.}
+
+\cventry{Jan 2020}{Participant, Quantum Computer Science Summer School 2020}{University of Technology Sydney}{Sydney, Australia}{}{}
+
+% \cventry{July-August 2019}{The Chinese University of Hong Kong}{Hong Kong, China}{}{}{Research Assistant of Prof. Yunjian Xu.}
+
+
+
+\end{document}

@@ -17,6 +17,14 @@ Education
 
 Honors and Awards
 ======
+* Ranked 1st in the High School Entrance Examination in Kunming, Yunnan Province, 2014.
+* Silver Medal, Chinese Mathematical Olympiad (CMO) Winter Camp, Yingtan, Jiangxi Province, 2015.
+* Silver Medal, Chinese Mathematical Olympiad (CMO) Winter Camp, Changsha, Hunan Province, 2016.
+* Bronze Medal, Chinese Physics Olympiad (CPhO), Wuhan, Hubei Province, 2016.
+* Ranked 1st (net score) in the University Entrance Examination in Yunnan Province, 2017.
+* National Scholarship, Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University, 2018.
+* Outstanding Graduate of Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University, 2021.
+* National Scholarship, Institute of Software, Chinese Academy of Sciences, 2025.
 
 Research Interest
 ======
@@ -43,4 +51,3 @@ Academic Activities
 * **July 2023:** Visiting Student, Department of Computer Science and Technology, Nanjing University, Nanjing, China.
   * Hosted by Prof. Penghui Yao.
 * **Jan 2020:** Participant, Quantum Computer Science Summer School 2020, University of Technology Sydney, Sydney, Australia.
-

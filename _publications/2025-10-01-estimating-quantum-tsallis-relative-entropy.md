@@ -8,5 +8,3 @@ venue: "arXiv:2510.00752"
 paperurl: "https://arxiv.org/abs/2510.00752"
 citation: 'Jinge Bao, <strong>Minbo Gao</strong>, Qisheng Wang. &quot;On Estimating the Quantum Tsallis Relative Entropy.&quot; arXiv:2510.00752.'
 ---
-
-Author order follows the alphabetical convention in theoretical computer science.

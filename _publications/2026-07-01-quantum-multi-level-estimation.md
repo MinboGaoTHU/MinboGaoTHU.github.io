@@ -8,5 +8,3 @@ venue: "53rd International Colloquium on Automata, Languages, and Programming (I
 paperurl: "https://arxiv.org/abs/2605.03685"
 citation: 'Kean Chen, <strong>Minbo Gao</strong>, Tongyang Li, Qisheng Wang, Xinzhao Wang. &quot;Quantum Multi-Level Estimation of Functionals of Discrete Distributions.&quot; Accepted to the 53rd International Colloquium on Automata, Languages, and Programming (ICALP 2026).'
 ---
-
-Author order follows the alphabetical convention in theoretical computer science unless otherwise specified.

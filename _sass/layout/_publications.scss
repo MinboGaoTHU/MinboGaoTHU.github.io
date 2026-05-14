@@ -1,0 +1,90 @@
+/* ==========================================================================
+   PUBLICATIONS
+   ========================================================================== */
+
+.publication-legend {
+  margin: 1.5em 0 2em;
+  color: var(--global-text-color-light);
+  font-size: 1em;
+}
+
+.publication-legend__item {
+  display: block;
+  margin: 0.35em 0;
+}
+
+.publication-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.35em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: 0.12em;
+}
+
+.publication-badge--contribution {
+  color: #ff0000;
+}
+
+.publication-badge--alphabetical {
+  color: #ff9900;
+}
+
+.publication-list {
+  margin: 1.5em 0 2em;
+  padding-left: 1.7em;
+
+  > li {
+    margin-bottom: 1.35em;
+    padding-left: 0.35em;
+  }
+
+  > li::marker {
+    color: var(--global-text-color-light);
+    font-weight: 700;
+  }
+}
+
+.publication-entry__title {
+  margin: 0 0 0.25em;
+  border-bottom: 0;
+  font-size: $type-size-5;
+  line-height: 1.35;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-link-color-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.publication-entry__authors,
+.publication-entry__venue {
+  margin: 0.15em 0;
+  color: var(--global-text-color-light);
+  font-size: $type-size-5;
+  line-height: 1.35;
+}
+
+.publication-entry__venue a {
+  color: var(--global-link-color);
+  text-decoration: underline;
+}
+
+.publication-entry--detail {
+  margin-bottom: 1.5em;
+}
+
+.publication-detail__meta {
+  margin-bottom: 1.5em;
+}

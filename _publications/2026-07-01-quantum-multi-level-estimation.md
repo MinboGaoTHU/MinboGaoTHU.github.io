@@ -7,5 +7,11 @@ date: 2026-07-01
 venue: "53rd International Colloquium on Automata, Languages, and Programming (ICALP 2026)"
 publication_status: "To appear in"
 paperurl: "https://arxiv.org/abs/2605.03685"
+authors: 'Kean Chen, <strong>Minbo Gao</strong>, Tongyang Li, Qisheng Wang, Xinzhao Wang.'
+author_order: alphabetical
+venue_display: "ICALP 2026"
+links:
+  - label: "arXiv:2605.03685"
+    url: "https://arxiv.org/abs/2605.03685"
 citation: 'Kean Chen, <strong>Minbo Gao</strong>, Tongyang Li, Qisheng Wang, Xinzhao Wang. &quot;Quantum Multi-Level Estimation of Functionals of Discrete Distributions.&quot; To appear in the 53rd International Colloquium on Automata, Languages, and Programming (ICALP 2026).'
 ---

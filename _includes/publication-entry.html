@@ -1,0 +1,54 @@
+{% include base_path %}
+
+{% if include.publication %}
+  {% assign publication = include.publication %}
+{% else %}
+  {% assign publication = page %}
+{% endif %}
+
+{% assign publication_title = publication.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign order = publication.author_order | default: "alphabetical" %}
+{% if order == "contribution" %}
+  {% assign badge_text = "C" %}
+  {% assign badge_label = "by contribution" %}
+{% else %}
+  {% assign badge_text = "A" %}
+  {% assign badge_label = "in alphabetical order" %}
+{% endif %}
+
+<article class="publication-entry{% if include.detail %} publication-entry--detail{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+  {% unless include.hide_title %}
+    <h3 class="publication-entry__title" itemprop="headline">
+      <a href="{{ base_path }}{{ publication.url }}" rel="permalink">{{ publication_title }}</a>
+    </h3>
+  {% endunless %}
+
+  {% if publication.authors %}
+    <div class="publication-entry__authors">
+      <span class="publication-badge publication-badge--{{ order }}" title="{{ badge_label }}" aria-label="{{ badge_label }}">{{ badge_text }}</span>
+      <span>{{ publication.authors }}</span>
+    </div>
+  {% endif %}
+
+  {% if publication.venue_display or publication.venue or publication.links or publication.paperurl %}
+    <div class="publication-entry__venue">
+      {% if publication.venue_display %}
+        <span>{{ publication.venue_display }}</span>
+      {% elsif publication.publication_status and publication.venue %}
+        <span>{{ publication.publication_status }} {{ publication.venue }}</span>
+      {% elsif publication.venue %}
+        <span>{{ publication.venue }}</span>
+      {% endif %}
+
+      {% if publication.links %}
+        {% if publication.venue_display or publication.venue %}, {% endif %}
+        {% for link in publication.links %}
+          <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% elsif publication.paperurl %}
+        {% if publication.venue_display or publication.venue %}, {% endif %}
+        <a href="{{ publication.paperurl }}">Paper</a>
+      {% endif %}.
+    </div>
+  {% endif %}
+</article>

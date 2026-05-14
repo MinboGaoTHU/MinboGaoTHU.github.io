@@ -7,11 +7,16 @@ Author: Yuan Chen
 import os
 import re
 import json
-import yaml
+import subprocess
 import argparse
 from datetime import datetime, date
 from pathlib import Path
 import glob
+
+try:
+    import yaml
+except ModuleNotFoundError:
+    yaml = None
 
 # Custom JSON encoder to handle date objects
 class DateTimeEncoder(json.JSONEncoder):
@@ -19,6 +24,32 @@ class DateTimeEncoder(json.JSONEncoder):
         if isinstance(obj, (datetime, date)):
             return obj.isoformat()
         return super().default(obj)
+
+def safe_load_yaml(yaml_text):
+    """Load YAML using PyYAML, with a Ruby fallback for this Jekyll project."""
+    if yaml:
+        return yaml.safe_load(yaml_text)
+
+    ruby_script = (
+        "data = YAML.safe_load(STDIN.read, "
+        "permitted_classes: [Date, Time], aliases: true); "
+        "puts JSON.generate(data)"
+    )
+
+    try:
+        result = subprocess.run(
+            ["ruby", "-ryaml", "-rjson", "-rdate", "-e", ruby_script],
+            input=yaml_text,
+            text=True,
+            capture_output=True,
+            check=True
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+        raise RuntimeError(
+            "PyYAML is not installed and the Ruby YAML fallback failed."
+        ) from exc
+
+    return json.loads(result.stdout) if result.stdout.strip() else {}
 
 def parse_markdown_cv(md_file):
     """Parse the markdown CV file and extract sections."""
@@ -58,7 +89,7 @@ def parse_config(config_file):
         return {}
     
     with open(config_file, 'r', encoding='utf-8') as file:
-        config = yaml.safe_load(file)
+        config = safe_load_yaml(file.read())
     
     return config
 
@@ -255,14 +286,14 @@ def parse_publications(pub_dir):
     if not os.path.exists(pub_dir):
         return publications
     
-    for pub_file in sorted(glob.glob(os.path.join(pub_dir, "*.md"))):
+    for pub_file in sorted(glob.glob(os.path.join(pub_dir, "*.md")), reverse=True):
         with open(pub_file, 'r', encoding='utf-8') as file:
             content = file.read()
         
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
         if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+            front_matter = safe_load_yaml(front_matter_match.group(1))
             
             # Extract publication details
             pub_entry = {
@@ -270,7 +301,12 @@ def parse_publications(pub_dir):
                 "publisher": front_matter.get('venue', ''),
                 "releaseDate": front_matter.get('date', ''),
                 "website": front_matter.get('paperurl', ''),
-                "summary": front_matter.get('excerpt', '')
+                "summary": front_matter.get('excerpt', ''),
+                "authors": front_matter.get('authors', ''),
+                "authorOrder": front_matter.get('author_order', ''),
+                "venueDisplay": front_matter.get('venue_display', ''),
+                "links": front_matter.get('links', []),
+                "category": front_matter.get('category', '')
             }
             
             publications.append(pub_entry)
@@ -291,7 +327,7 @@ def parse_talks(talks_dir):
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
         if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+            front_matter = safe_load_yaml(front_matter_match.group(1))
             
             # Extract talk details
             talk_entry = {
@@ -320,7 +356,7 @@ def parse_portfolio(portfolio_dir):
         # Extract front matter
         front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
         if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+            front_matter = safe_load_yaml(front_matter_match.group(1))
             
             # Extract portfolio details
             portfolio_entry = {
@@ -376,6 +412,7 @@ def create_cv_json(md_file, config_file, repo_root, output_file):
     # Write the JSON to a file
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(cv_json, file, indent=2, cls=DateTimeEncoder)
+        file.write('\n')
     
     print(f"Successfully converted {md_file} to {output_file}")
 

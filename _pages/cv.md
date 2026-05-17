@@ -26,5 +26,9 @@ Honors and Awards
 * Outstanding Graduate of Institute for Interdisciplinary Information Sciences (IIIS), Tsinghua University, 2021.
 * National Scholarship, Institute of Software, Chinese Academy of Sciences, 2025.
 
-
+Professional Service
+======
+* **Conference reviewer:** ITCS 2023; QIP 2023-2026; STOC 2024; NeurIPS 2024-2025; QCE 2023-2026; AQS 2023; TQC 2024, 2026; QCrypto 2024; QCNC 2025; STACS 2026; ICALP 2026; ICLR 2025-2026; AISTATS 2025-2026; AAAI 2026 (PC).
+* **Journal reviewer:** TPAMI; Quantum; ACM Transactions on Quantum Computing.
+* **Recognition:** Notable Reviewer, ICLR 2025.
 

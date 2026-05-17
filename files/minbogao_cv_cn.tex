@@ -1,0 +1,137 @@
+% !TeX program = xelatex
+%% Chinese CV based on minbogao_cv.tex.
+%% Compile with XeLaTeX: latexmk -xelatex minbogao_cv_cn.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage{iftex}
+\ifPDFTeX
+  \errmessage{This Chinese CV must be compiled with XeLaTeX. Use: latexmk -xelatex minbogao_cv_cn.tex}
+\fi
+\usepackage[UTF8, scheme=plain, fontset=fandol]{ctex}
+
+\moderncvtheme[blue]{classic}
+\nopagenumbers{}
+\AtBeginDocument{\recomputelengths}
+
+% adjust the page margins
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+% width of the date column
+\setlength{\hintscolumnwidth}{2.9cm}
+\setlength{\makecvtitlenamewidth}{9cm}
+
+% personal data
+\firstname{高敏博}
+\familyname{}
+\address{中国科学院软件研究所系统软件重点实验室}{中国北京}
+\mobile{(+86) 13108714733}
+\email{gmb17@tsinghua.org.cn}
+\extrainfo{{\href{https://scholar.google.com/citations?hl=zh-CN&user=b8i9J_QAAAAJ&view_op=list_works&sortby=pubdate}{Google Scholar}}}
+\photo[50pt][0.4pt]{../images/minbogao1.jpg}
+
+\AfterPreamble{\hypersetup{
+  unicode=true,
+  pdfauthor={高敏博},
+  pdftitle={高敏博简历},
+  pdfsubject={高敏博个人简历},
+  urlcolor=blue,
+}}
+
+\begin{document}
+
+\makecvtitle
+
+\section{教育经历}
+
+\cventry{2021--至今}{博士研究生在读}{中国科学院软件研究所}{北京}{中国}{\begin{itemize}
+    \item 导师：应明生教授、季铮锋教授。
+\end{itemize}}
+\cventry{2017--2021}{计算机科学与技术学士（姚班）}{清华大学交叉信息研究院}{北京}{中国}{}
+
+\section{荣誉与获奖}
+
+\cvitem{2014}{云南省昆明市中考第一名。}
+\cvitem{2015}{中国数学奥林匹克（CMO）冬令营银牌，江西鹰潭。}
+\cvitem{2016}{中国数学奥林匹克（CMO）冬令营银牌，湖南长沙。}
+\cvitem{2016}{中国物理奥林匹克（CPhO）铜牌，湖北武汉。}
+\cvitem{2017}{云南省高考裸分第一名。}
+\cvitem{2018}{国家奖学金，清华大学交叉信息研究院（IIIS）。}
+\cvitem{2021}{清华大学交叉信息研究院（IIIS）优秀毕业生。}
+\cvitem{2025}{国家奖学金，中国科学院软件研究所。}
+
+\section{研究兴趣}
+
+\cvitem{}{我的研究兴趣主要在\textbf{量子计算与理论计算机科学}的交叉方向，尤其关注量子算法及其在学习、优化、采样和分布估计中的应用。我关心如何利用量子计算为机器学习相关问题提供可证明的算法加速与复杂度理解，包括零和博弈中的低遗憾算法、分布泛函估计、图采样与稀疏化、以及近似最小值搜索等问题。这些方向与大规模机器学习系统中的优化、采样、模型评估和资源受限决策有自然联系；我的工作重点是从量子算法和复杂性理论出发，建立严格的算法保证。具体而言，我的工作包括面向分布和学习任务的量子算法 [2,8,10]，图与离散优化问题的量子加速 [4,5,6]，量子动力学与模拟 [1,9]，以及经典强化学习理论中低切换成本线性 MDP 的高效算法 [11]。此外，我也研究\textbf{量子程序逻辑}，特别是关系型量子 Hoare 逻辑 [3,7]，将量子最优传输和优化方法应用到程序验证中。}
+
+\section{论文发表}
+\cvitem{}{\emph{除特别说明外，作者顺序遵循理论计算机科学领域的字母序惯例。}}
+
+\cvitem{[1]}{\textbf{Minbo Gao}, Zhengfeng Ji, Qisheng Wang, Wenjun Yu, Qi Zhao. Quantum Hamiltonian Certification. \href{https://epubs.siam.org/doi/abs/10.1137/1.9781611978971.53}{Proceedings of the 2026 Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 2026), 1424-1467.}}
+
+\cvitem{[2]}{Kean Chen, \textbf{Minbo Gao}, Tongyang Li, Qisheng Wang, Xinzhao Wang. Quantum Multi-Level Estimation of Functionals of Discrete Distributions. \href{https://arxiv.org/abs/2605.03685}{被 53rd International Colloquium on Automata, Languages, and Programming (ICALP 2026) 接受。}}
+
+\cvitem{[3]}{Gilles Barthe, \textbf{Minbo Gao}, Jam Kabeer Ali Khan, Matthijs Muis, Ivan Renison, Keiya Sakabe, Michael Walter, Yingte Xu, Tianshi Yu, Li Zhou. Complete Relational Logic for Infinite-Dimensional Quantum Programs with Unbounded Assertions. \href{https://arxiv.org/abs/2510.07051}{被 41st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2026) 接受。}}
+
+\cvitem{[4]}{\textbf{Minbo Gao}, Zhengfeng Ji, Qisheng Wang. Quantum Approximate $k$-Minimum Finding. \href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2025.51}{Proceedings of the 33rd Annual European Symposium on Algorithms (ESA 2025), 351, 51:1--51:15.}}
+
+\cvitem{[5]}{Chenghua Liu, \textbf{Minbo Gao}, Zhengfeng Ji, Mingsheng Ying {\scriptsize （按贡献排序）}. Quantum Speedup for Hypergraph Sparsification. \href{https://proceedings.mlr.press/v267/liu25r.html}{Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267:38448-38466, 2025.}}
+
+\cvitem{[6]}{Simon Apers, \textbf{Minbo Gao}, Zhengfeng Ji, Chenghua Liu. Quantum Speedup for Sampling Random Spanning Trees. \href{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.13}{Proceedings of the 52nd International Colloquium on Automata, Languages, and Programming (ICALP 2025), 334, 13:1--13:21.}}
+
+\cvitem{[7]}{Gilles Barthe, \textbf{Minbo Gao}, Theo Wang, Li Zhou. Complete Quantum Relational Hoare Logics from Optimal Transport Duality. \href{https://ieeexplore.ieee.org/abstract/document/11186298/}{2025 40th Annual ACM/IEEE Symposium on Logic in Computer Science (LICS 2025), 884-925.}}
+
+\cvitem{[8]}{\textbf{Minbo Gao}, Zhengfeng Ji, Tongyang Li, Qisheng Wang. Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games. \href{https://proceedings.neurips.cc/paper_files/paper/2023/file/637df18481a6aa74238bd2cafff94cb9-Paper-Conference.pdf}{Advances in Neural Information Processing Systems 36 (NeurIPS 2023), 31177-31203.}}
+
+\section{部分预印本}
+
+\cvitem{[9]}{\textbf{Minbo Gao}, Zhengfeng Ji, Chenghua Liu. L\'{e}vy-Khintchine Structure Enables Fast-Forwardable Lindbladian Simulation.
+\href{https://arxiv.org/abs/2511.10253}{arXiv:2511.10253}.}
+
+\cvitem{[10]}{Jinge Bao, \textbf{Minbo Gao}, Qisheng Wang. On Estimating the Quantum Tsallis Relative Entropy.
+\href{https://arxiv.org/abs/2510.00752}{arXiv:2510.00752}.}
+
+\cvitem{[11]}{\textbf{Minbo Gao}\textsuperscript{*}, Tianle Xie\textsuperscript{*}, Simon S. Du, Lin F. Yang {\scriptsize （按贡献排序；\textsuperscript{*} 表示共同一作，前两位作者按字母序排列）}. A Provably Efficient Algorithm for Linear Markov Decision Process with Low Switching Cost.
+\href{https://arxiv.org/abs/2101.00494}{arXiv:2101.00494}.}
+
+\section{学术服务}
+
+\cvitem{会议审稿人}{ITCS 2023；QIP 2023--2026；STOC 2024；NeurIPS 2024--2025；QCE 2023--2026；AQS 2023；TQC 2024、2026；QCrypto 2024；QCNC 2025；STACS 2026；ICALP 2026；ICLR 2025--2026；AISTATS 2025--2026；AAAI 2026 (PC)。}
+
+\cvitem{期刊审稿人}{TPAMI；Quantum；ACM Transactions on Quantum Computing。}
+
+\cvitem{荣誉}{ICLR 2025 Notable Reviewer。}
+
+\section{学术活动}
+
+\cventry{2021--至今}{{\href{https://quantum.cs.tsinghua.edu.cn/author/高敏博/}{长期访问学生}}}{清华大学计算机科学与技术系量子软件中心}{北京}{中国}{访问导师：季铮锋教授。}
+
+\cventry{2025.07}
+{2025 INFORMS International Meeting 受邀报告人}
+{}
+{新加坡}
+{}
+{报告工作 “Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games”。}
+
+\cventry{2025.04}
+{Workshop on Quantum Information and Optimization 参会者}
+{天元数学研究中心}
+{昆明，中国}
+{}
+{报告工作 “Quantum Approximate $k$-Minimum Finding”。}
+
+\cventry{2024.11}
+{访问学生}
+{武汉大学人工智能学院}
+{武汉，中国}
+{}
+{访问导师：李绎楠教授。}
+
+\cventry{2023.11--2024.01}
+{访问学生}
+{名古屋大学大学院多元数学科学研究科}
+{名古屋，日本}
+{}
+{访问导师：Fran\c{c}ois Le Gall 教授。}
+
+\cventry{2023.07}{访问学生}{南京大学计算机科学与技术系}{南京，中国}{}{访问导师：姚鹏晖教授。}
+
+\end{document}

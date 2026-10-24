@@ -1,17 +1,19 @@
 ---
-layout: archive
+layout: academic
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
+[Download CV (PDF)]({{ '/files/minbogao_cv.pdf' | relative_url }}) · [Academic activities and talks]({{ '/academic-activities/' | relative_url }})
+
 Education
 ======
-* **2021-present:** Ph.D. Student, Institute of Software, Chinese Academy of Sciences, Beijing, China.
+* **2021-present:** Ph.D. Candidate in Computer Science, Institute of Software, Chinese Academy of Sciences, Beijing, China.
   * Advised by Prof. Mingsheng Ying and Prof. Zhengfeng Ji.
 * **2017-2021:** B.Sc. in Computer Science and Technology (Yao Class), Institute for Interdisciplinary Information Sciences, Tsinghua University, Beijing, China.
 

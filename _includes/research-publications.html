@@ -1,0 +1,8 @@
+{% assign research_publications = site.publications | sort: "date" | reverse %}
+<ul class="research-publications" aria-label="Related publications">
+  {% for paper in research_publications %}
+    {% if paper.research_areas contains include.area %}
+      <li><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a> <span>— {{ paper.venue_display }}{% if paper.venue_display == "Preprint" %}, {{ paper.date | date: "%Y" }}{% endif %}</span></li>
+    {% endif %}
+  {% endfor %}
+</ul>

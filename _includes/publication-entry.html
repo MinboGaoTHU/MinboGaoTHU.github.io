@@ -24,9 +24,14 @@
   {% endunless %}
 
   {% if publication.authors %}
+    {% assign publication_authors = publication.authors %}
+    {% for coauthor in site.data.coauthors %}
+      {% capture coauthor_link %}<a href="{{ coauthor[1] }}">{{ coauthor[0] }}</a>{% endcapture %}
+      {% assign publication_authors = publication_authors | replace: coauthor[0], coauthor_link %}
+    {% endfor %}
     <div class="publication-entry__authors">
       <span class="publication-badge publication-badge--{{ order }}" title="{{ badge_label }}" aria-label="{{ badge_label }}">{{ badge_text }}</span>
-      <span>{{ publication.authors }}</span>
+      <span>{{ publication_authors }}</span>
     </div>
   {% endif %}
 

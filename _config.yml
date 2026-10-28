@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Minbo Gao"
 title_separator          : "-"
 name                     : &name "Minbo Gao"
-description              : &description "Minbo Gao's academic homepage"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Minbo Gao — theoretical foundations of quantum computing: algorithms, programming languages, and quantum optimal transport."
 url                      : https://MinboGaoTHU.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "minbogao1.jpg"
   name             : "Minbo Gao"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. student at the Institute of Software, Chinese Academy of Sciences.<br>Research interests: quantum algorithms and quantum program logic."
+  bio              : "Ph.D. candidate in Computer Science at the Institute of Software, Chinese Academy of Sciences.<br>Theoretical foundations of quantum computing."
   location         : "Beijing, China"
   employer         : "Institute of Software, Chinese Academy of Sciences"
   uri              : # URL
@@ -84,6 +84,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
+  journals:
+    title: 'Journal Papers'
   conferences:
     title: 'Conference Papers'
   preprints:

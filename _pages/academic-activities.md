@@ -1,8 +1,8 @@
 ---
-layout: archive
+layout: academic
 title: "Academic Activities"
 permalink: /academic-activities/
-author_profile: true
+author_profile: false
 redirect_from:
   - /talks/
   - /talks.html

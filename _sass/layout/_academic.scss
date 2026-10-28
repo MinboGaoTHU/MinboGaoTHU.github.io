@@ -1,0 +1,224 @@
+/* Editorial refinements on the existing AcademicPages theme. */
+:root:not([data-theme="dark"]) {
+  --global-bg-color: #fdfdfc;
+  --global-text-color: #292e34;
+  --global-text-color-light: #5c6570;
+  --global-link-color: #244f73;
+  --global-link-color-hover: #163851;
+  --global-link-color-visited: #244f73;
+  --global-border-color: #e0e5e8;
+  --global-footer-bg-color: #f5f6f6;
+}
+
+html { font-size: 16px; }
+body { line-height: 1.7; }
+
+.masthead,
+#main,
+.page__footer { animation: none; }
+
+a, p, span, img, h1, h2, header { transition: none; }
+a { text-underline-offset: 3px; }
+
+.masthead__inner-wrap,
+.page__footer footer { max-width: 1000px; }
+
+.masthead__inner-wrap { padding: 0.75em 24px; }
+.masthead__menu-item--lg { padding-right: 1.5em; }
+.greedy-nav .visible-links a:before { display: none; }
+.greedy-nav .hidden-links { box-shadow: none; }
+
+#main.academic-page {
+  max-width: 1000px;
+  margin: 3.5em auto 0;
+  padding: 0 24px;
+}
+
+.academic-content {
+  font-size: 16px;
+
+  > p { max-width: 84ch; }
+
+  .page__title {
+    margin-bottom: 0.8em;
+    font-family: $serif;
+    font-size: 2.6em;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+
+  h2 {
+    margin: 2.4em 0 1em;
+    padding-top: 1.1em;
+    padding-bottom: 0;
+    border-top: 1px solid var(--global-border-color);
+    border-bottom: 0;
+    font-family: $serif;
+    font-size: 1.75em;
+    font-weight: 400;
+    scroll-margin-top: 90px;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+
+  a:hover { color: var(--global-link-color-hover); }
+}
+
+.academic-intro {
+  display: grid;
+  grid-template-columns: 1fr 154px;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 2em;
+
+  .page__title { margin-bottom: 0.4em; }
+
+  &__position {
+    font-size: 1.05em;
+    line-height: 1.65;
+
+    span { color: var(--global-text-color-light); }
+  }
+
+  &__photo {
+    display: block;
+    width: 154px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.academic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  font-size: 0.9em;
+}
+
+.research-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.6em 0 0;
+  padding: 0;
+  list-style: none;
+
+  li { margin: 0; }
+
+  a {
+    display: block;
+    padding: 4px 11px;
+    border: 1px solid #dce4eb;
+    border-radius: 5px;
+    background: #f0f4f7;
+    color: #36536b;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  a:hover { text-decoration: underline; }
+}
+
+.research-directions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+
+  h3 { margin-top: 0; }
+  p:last-child { margin-bottom: 0; }
+}
+
+.research-theme {
+  margin-top: 2em;
+  padding-top: 1.6em;
+  border-top: 1px solid var(--global-border-color);
+
+  h3 { margin-top: 0; }
+}
+
+.research-directions p:last-child,
+.research-theme p:last-child { font-size: 0.85em; }
+
+.research-publications {
+  margin: 1.5em 0;
+  padding-left: 1.2em;
+  font-size: 0.9em;
+
+  span { color: var(--global-text-color-light); }
+}
+
+.publication-list--selected {
+  padding: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: 1.7em;
+    padding-left: 0;
+  }
+}
+
+.academic-content .publication-entry__title {
+  margin: 0 0 0.3em;
+  font-size: 1.05em;
+  font-weight: 600;
+
+  a {
+    color: var(--global-link-color);
+    text-decoration: none;
+  }
+
+  a:hover { text-decoration: underline; }
+}
+
+.publication-entry__authors,
+.publication-entry__venue {
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+
+.publication-badge--alphabetical,
+.publication-badge--contribution { color: var(--global-text-color-light); }
+
+.publication-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin: 1em 0;
+  font-size: 0.8em;
+}
+
+html[data-theme="dark"] .research-labels a {
+  background: #222d38;
+  border-color: #40505f;
+  color: #c5d6e4;
+}
+
+@media (max-width: 600px) {
+  #main.academic-page { margin-top: 2em; }
+  .academic-content .page__title { font-size: 2.2em; }
+  .academic-content h2 { margin-top: 1.8em; }
+
+  .academic-intro {
+    grid-template-columns: 1fr 90px;
+    align-items: start;
+    gap: 16px;
+
+    &__photo { width: 90px; height: 108px; }
+  }
+
+  .research-directions { grid-template-columns: 1fr; gap: 28px; }
+  .research-labels { gap: 8px; }
+}
+
+@media (max-width: 400px) {
+  .academic-intro {
+    grid-template-columns: 1fr;
+
+    &__photo { grid-row: 1; }
+  }
+}

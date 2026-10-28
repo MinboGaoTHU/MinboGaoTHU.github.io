@@ -2,6 +2,7 @@
 title: "Quantum Speedup for Sampling Random Spanning Trees"
 collection: publications
 category: conferences
+research_areas: [algorithms]
 permalink: /publication/quantum-speedup-sampling-random-spanning-trees
 date: 2025-07-01
 venue: "Proceedings of the 52nd International Colloquium on Automata, Languages, and Programming (ICALP 2025)"

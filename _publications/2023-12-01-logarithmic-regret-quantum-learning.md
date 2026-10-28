@@ -2,6 +2,7 @@
 title: "Logarithmic-Regret Quantum Learning Algorithms for Zero-Sum Games"
 collection: publications
 category: conferences
+research_areas: [algorithms]
 permalink: /publication/logarithmic-regret-quantum-learning
 date: 2023-12-01
 venue: "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)"

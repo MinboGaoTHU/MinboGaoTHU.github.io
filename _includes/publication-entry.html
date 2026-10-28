@@ -30,7 +30,7 @@
       {% assign publication_authors = publication_authors | replace: coauthor[0], coauthor_link %}
     {% endfor %}
     <div class="publication-entry__authors">
-      <span class="publication-badge publication-badge--{{ order }}" title="{{ badge_label }}" aria-label="{{ badge_label }}">{{ badge_text }}</span>
+      {% unless include.hide_order %}<span class="publication-badge publication-badge--{{ order }}" title="{{ badge_label }}" aria-label="{{ badge_label }}">{{ badge_text }}</span>{% endunless %}
       <span>{{ publication_authors }}</span>
     </div>
   {% endif %}
@@ -38,7 +38,7 @@
   {% if publication.venue_display or publication.venue or publication.links or publication.paperurl %}
     <div class="publication-entry__venue">
       {% if publication.venue_display %}
-        <span>{{ publication.venue_display }}</span>
+        <span>{{ publication.venue_display }}{% if publication.venue_display == "Preprint" %}, {{ publication.date | date: "%Y" }}{% endif %}</span>
       {% elsif publication.publication_status and publication.venue %}
         <span>{{ publication.publication_status }} {{ publication.venue }}</span>
       {% elsif publication.venue %}
